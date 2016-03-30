@@ -10,19 +10,15 @@ import android.widget.TextView;
 
 public class MainPage extends ActionBarActivity {
 
-    Button clickme;
-
-    public void onClick(View view){
-        TextView textView = (TextView)findViewById(R.id.helloWorld);
-        textView.setText("Cheese");
-        Test test = new Test();
-        test.speak();
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        clickme = (Button)findViewById(R.id.button);
+
+        ApiConnection apiConnection = new ApiConnection();
+        ApiConnection.DownloadTask downloadTask = apiConnection.new DownloadTask();
+        downloadTask.execute("http://afternoon-garden-52459.herokuapp.com/api/get/all");
+
 
     }
 

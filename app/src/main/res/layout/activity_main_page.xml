@@ -15,12 +15,4 @@
         android:text="Hello World!"
         android:id="@+id/helloWorld" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Click Me!"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick" />
 </RelativeLayout>
